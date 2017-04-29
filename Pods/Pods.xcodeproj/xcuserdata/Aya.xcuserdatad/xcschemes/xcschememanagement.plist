@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-conTAM.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,6 +24,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZXingObjC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -27,12 +47,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>787ED0986F4C47D3B0D12C9DABBF1B01</key>
+		<key>9E033EDB5EC0819481B0546434FA577B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>956BDF6CB62981B00C7D16C735198217</key>
+		<key>BCCBF47C89D344F7F23EF0F2A345EA0D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE05D8212B39D7E0B86510A103A30F1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECCBFBE182497B787841CFFBC899A764</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2974278E4C17D7B8A416ADDB835B5BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F97B8FC9F57067F3272C577437EA4F6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
