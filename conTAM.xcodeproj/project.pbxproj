@@ -17,7 +17,14 @@
 		03F21E711EB527B9005259DC /* conTAMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F21E701EB527B9005259DC /* conTAMUITests.m */; };
 		35853498CCE328660D872B0C /* libPods-conTAM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E32EE54EC413B39CC33752 /* libPods-conTAM.a */; };
 		3C690C8317DE2B31E3043575 /* libPods-conTAMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF7445EAA22F74F8B3A2F3 /* libPods-conTAMTests.a */; };
-		4E9405A81EB54D020024782B /* pexels.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4E9405A71EB54D020024782B /* pexels.jpeg */; };
+		4E9405B41EB5F5C90024782B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9405B31EB5F5C90024782B /* LoginViewController.m */; };
+		4E9405B71EB5F5E30024782B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9405B61EB5F5E30024782B /* SignUpViewController.m */; };
+		4E9405BB1EB5F7F40024782B /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9405B81EB5F7F40024782B /* email.png */; };
+		4E9405BC1EB5F7F40024782B /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9405B91EB5F7F40024782B /* phone.png */; };
+		4E9405BD1EB5F7F40024782B /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9405BA1EB5F7F40024782B /* user.png */; };
+		4E9405C01EB5FBF10024782B /* ContactsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9405BF1EB5FBF10024782B /* ContactsListViewController.m */; };
+		4E9405C31EB5FEC80024782B /* ContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9405C21EB5FEC80024782B /* ContactDetailsViewController.m */; };
+		4E9405C61EB5FEFD0024782B /* AddOrUpdateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9405C51EB5FEFD0024782B /* AddOrUpdateContactViewController.m */; };
 		644BFDE2758636E2115179C4 /* libPods-conTAMUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4A4FBD2F894593CD926AC5 /* libPods-conTAMUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +64,19 @@
 		03F21E721EB527B9005259DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A6A7BD30A6C79D40D5AFBB3 /* Pods-conTAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conTAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conTAM/Pods-conTAM.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1FFE5EE2703C169645EF7B /* Pods-conTAMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conTAMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-conTAMTests/Pods-conTAMTests.release.xcconfig"; sourceTree = "<group>"; };
-		4E9405A71EB54D020024782B /* pexels.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pexels.jpeg; sourceTree = "<group>"; };
+		4E9405B21EB5F5C90024782B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewControllers/LoginViewController.h; sourceTree = "<group>"; };
+		4E9405B31EB5F5C90024782B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewControllers/LoginViewController.m; sourceTree = "<group>"; };
+		4E9405B51EB5F5E30024782B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = viewControllers/SignUpViewController.h; sourceTree = "<group>"; };
+		4E9405B61EB5F5E30024782B /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = viewControllers/SignUpViewController.m; sourceTree = "<group>"; };
+		4E9405B81EB5F7F40024782B /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = email.png; path = ui/email.png; sourceTree = "<group>"; };
+		4E9405B91EB5F7F40024782B /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = phone.png; path = ui/phone.png; sourceTree = "<group>"; };
+		4E9405BA1EB5F7F40024782B /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user.png; path = ui/user.png; sourceTree = "<group>"; };
+		4E9405BE1EB5FBF10024782B /* ContactsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsListViewController.h; path = viewControllers/ContactsListViewController.h; sourceTree = "<group>"; };
+		4E9405BF1EB5FBF10024782B /* ContactsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsListViewController.m; path = viewControllers/ContactsListViewController.m; sourceTree = "<group>"; };
+		4E9405C11EB5FEC80024782B /* ContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactDetailsViewController.h; path = viewControllers/ContactDetailsViewController.h; sourceTree = "<group>"; };
+		4E9405C21EB5FEC80024782B /* ContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactDetailsViewController.m; path = viewControllers/ContactDetailsViewController.m; sourceTree = "<group>"; };
+		4E9405C41EB5FEFD0024782B /* AddOrUpdateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddOrUpdateContactViewController.h; path = viewControllers/AddOrUpdateContactViewController.h; sourceTree = "<group>"; };
+		4E9405C51EB5FEFD0024782B /* AddOrUpdateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddOrUpdateContactViewController.m; path = viewControllers/AddOrUpdateContactViewController.m; sourceTree = "<group>"; };
 		56E32EE54EC413B39CC33752 /* libPods-conTAM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-conTAM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E493827287873A862E3CD03 /* Pods-conTAMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conTAMUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conTAMUITests/Pods-conTAMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFD97BFD0B2E3FDB66E78FC1 /* Pods-conTAM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conTAM.release.xcconfig"; path = "Pods/Target Support Files/Pods-conTAM/Pods-conTAM.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,7 +139,8 @@
 		03F21E4A1EB527B9005259DC /* conTAM */ = {
 			isa = PBXGroup;
 			children = (
-				4E9405A71EB54D020024782B /* pexels.jpeg */,
+				4E9405B11EB5F5610024782B /* ViewControllers */,
+				4E9405AB1EB5EEED0024782B /* ui */,
 				03F21E4E1EB527B9005259DC /* AppDelegate.h */,
 				03F21E4F1EB527B9005259DC /* AppDelegate.m */,
 				03F21E511EB527B9005259DC /* ViewController.h */,
@@ -181,6 +201,33 @@
 				BE3CC30D00EC4159B6397CB7 /* Pods-conTAMUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E9405AB1EB5EEED0024782B /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4E9405B81EB5F7F40024782B /* email.png */,
+				4E9405B91EB5F7F40024782B /* phone.png */,
+				4E9405BA1EB5F7F40024782B /* user.png */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
+		4E9405B11EB5F5610024782B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E9405B21EB5F5C90024782B /* LoginViewController.h */,
+				4E9405B31EB5F5C90024782B /* LoginViewController.m */,
+				4E9405B51EB5F5E30024782B /* SignUpViewController.h */,
+				4E9405B61EB5F5E30024782B /* SignUpViewController.m */,
+				4E9405BE1EB5FBF10024782B /* ContactsListViewController.h */,
+				4E9405BF1EB5FBF10024782B /* ContactsListViewController.m */,
+				4E9405C11EB5FEC80024782B /* ContactDetailsViewController.h */,
+				4E9405C21EB5FEC80024782B /* ContactDetailsViewController.m */,
+				4E9405C41EB5FEFD0024782B /* AddOrUpdateContactViewController.h */,
+				4E9405C51EB5FEFD0024782B /* AddOrUpdateContactViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +345,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E9405A81EB54D020024782B /* pexels.jpeg in Resources */,
 				03F21E5B1EB527B9005259DC /* LaunchScreen.storyboard in Resources */,
 				03F21E581EB527B9005259DC /* Assets.xcassets in Resources */,
+				4E9405BD1EB5F7F40024782B /* user.png in Resources */,
 				03F21E561EB527B9005259DC /* Main.storyboard in Resources */,
+				4E9405BC1EB5F7F40024782B /* phone.png in Resources */,
+				4E9405BB1EB5F7F40024782B /* email.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +513,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9405C31EB5FEC80024782B /* ContactDetailsViewController.m in Sources */,
+				4E9405C61EB5FEFD0024782B /* AddOrUpdateContactViewController.m in Sources */,
+				4E9405B41EB5F5C90024782B /* LoginViewController.m in Sources */,
+				4E9405C01EB5FBF10024782B /* ContactsListViewController.m in Sources */,
+				4E9405B71EB5F5E30024782B /* SignUpViewController.m in Sources */,
 				03F21E531EB527B9005259DC /* ViewController.m in Sources */,
 				03F21E501EB527B9005259DC /* AppDelegate.m in Sources */,
 				03F21E4D1EB527B9005259DC /* main.m in Sources */,
