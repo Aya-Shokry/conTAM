@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03EBD50D1EB5B1E70029CA80 /* ContactDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EBD50C1EB5B1E70029CA80 /* ContactDTO.m */; };
+		03EBD5101EB5B7C70029CA80 /* ContactHasPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EBD50F1EB5B7C70029CA80 /* ContactHasPhone.m */; };
+		03EBD5131EB5C1690029CA80 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EBD5121EB5C1690029CA80 /* User.m */; };
+		03EBD5161EB5CDA50029CA80 /* ContactDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 03EBD5151EB5CDA50029CA80 /* ContactDAO.m */; };
 		03F21E4D1EB527B9005259DC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F21E4C1EB527B9005259DC /* main.m */; };
 		03F21E501EB527B9005259DC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F21E4F1EB527B9005259DC /* AppDelegate.m */; };
 		03F21E531EB527B9005259DC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F21E521EB527B9005259DC /* ViewController.m */; };
@@ -46,6 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03EBD50B1EB5B1E70029CA80 /* ContactDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactDTO.h; path = "Database/Data Transfer Objects/ContactDTO.h"; sourceTree = "<group>"; };
+		03EBD50C1EB5B1E70029CA80 /* ContactDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactDTO.m; path = "Database/Data Transfer Objects/ContactDTO.m"; sourceTree = "<group>"; };
+		03EBD50E1EB5B7C70029CA80 /* ContactHasPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactHasPhone.h; path = "Database/Data Transfer Objects/ContactHasPhone.h"; sourceTree = "<group>"; };
+		03EBD50F1EB5B7C70029CA80 /* ContactHasPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactHasPhone.m; path = "Database/Data Transfer Objects/ContactHasPhone.m"; sourceTree = "<group>"; };
+		03EBD5111EB5C1690029CA80 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		03EBD5121EB5C1690029CA80 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		03EBD5141EB5CDA50029CA80 /* ContactDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactDAO.h; path = "Database/Data Access Objects/ContactDAO.h"; sourceTree = "<group>"; };
+		03EBD5151EB5CDA50029CA80 /* ContactDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactDAO.m; path = "Database/Data Access Objects/ContactDAO.m"; sourceTree = "<group>"; };
 		03F21E481EB527B9005259DC /* conTAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = conTAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F21E4C1EB527B9005259DC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		03F21E4E1EB527B9005259DC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +126,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03EBD5081EB5B0890029CA80 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				03EBD50A1EB5B1240029CA80 /* Data Access Objects */,
+				03EBD5091EB5B0F20029CA80 /* Data Transfer Objects */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		03EBD5091EB5B0F20029CA80 /* Data Transfer Objects */ = {
+			isa = PBXGroup;
+			children = (
+				03EBD50B1EB5B1E70029CA80 /* ContactDTO.h */,
+				03EBD50C1EB5B1E70029CA80 /* ContactDTO.m */,
+				03EBD50E1EB5B7C70029CA80 /* ContactHasPhone.h */,
+				03EBD50F1EB5B7C70029CA80 /* ContactHasPhone.m */,
+			);
+			name = "Data Transfer Objects";
+			sourceTree = "<group>";
+		};
+		03EBD50A1EB5B1240029CA80 /* Data Access Objects */ = {
+			isa = PBXGroup;
+			children = (
+				03EBD5141EB5CDA50029CA80 /* ContactDAO.h */,
+				03EBD5151EB5CDA50029CA80 /* ContactDAO.m */,
+			);
+			name = "Data Access Objects";
+			sourceTree = "<group>";
+		};
 		03F21E3F1EB527B9005259DC = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +191,8 @@
 				03F21E591EB527B9005259DC /* LaunchScreen.storyboard */,
 				03F21E5C1EB527B9005259DC /* Info.plist */,
 				03F21E4B1EB527B9005259DC /* Supporting Files */,
+				03EBD5111EB5C1690029CA80 /* User.h */,
+				03EBD5121EB5C1690029CA80 /* User.m */,
 			);
 			path = conTAM;
 			sourceTree = "<group>";
