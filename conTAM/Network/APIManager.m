@@ -11,17 +11,18 @@
 @implementation APIManager
 
 +(void)makeGETRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters {
-    NSError *error;
-    if (error == nil) {
-        [[SessionManager sharedHTTPSessionManager] GET:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    
+    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:@"POST" URLString:url parameters:parameters error:nil];
+    
+    NSURLSessionDataTask *dataTask = [[SessionManager sharedHTTPSessionManager] dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
             NSLog(@"%@", responseObject);
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            NSLog(@"error in APIManager:makeGETRequest : %@", error.description);
-        }];
-    }
-    else {
-        NSLog(@"error in APIManager:makeGETRequest : %@", error.description);
-    }
+        }
+    }];
+    
+    [dataTask resume];
 }
 
 +(void)makePOSTRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameterserror {

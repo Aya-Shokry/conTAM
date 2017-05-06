@@ -16,8 +16,7 @@
     NSError *error;
     NSDictionary *userJSONObject = [MTLJSONAdapter JSONDictionaryFromModel:user error:&error];
     if (error == nil) {
-        NSLog(@"JSON : %@", @{@"user" : userJSONObject});
-        [APIManager makeGETRequestWithURL:[[SessionManager getBaseURL] stringByAppendingString:@"registerUser"] parameters:@{@"user" : userJSONObject}];
+        [APIManager makeGETRequestWithURL:[[SessionManager getBaseURL] stringByAppendingString:@"registerUser"] parameters:userJSONObject];
     }
     else  {
         NSLog(@"error in UserServices:registerUserWithData : %@", error.description);

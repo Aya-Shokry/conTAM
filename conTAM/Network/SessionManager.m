@@ -12,19 +12,6 @@
 
 static NSString *const baseURL = @"http://localhost:8081/conTAM/conTAM/service/";
 
-+ (id)sharedManager {
-    static AFURLSessionManager *_sessionManager = nil;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-       // _sessionManager = [[self alloc] init];
-        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-        _sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    });
-    
-    return _sessionManager;
-}
-
 + (AFHTTPSessionManager *)sharedHTTPSessionManager {
     
     static AFHTTPSessionManager *sharedManager = nil;
@@ -32,8 +19,9 @@ static NSString *const baseURL = @"http://localhost:8081/conTAM/conTAM/service/"
     
     dispatch_once(&onceToken, ^{
         sharedManager = [AFHTTPSessionManager manager];
-        sharedManager.requestSerializer = [[AFJSONRequestSerializer alloc] init];
-        sharedManager.responseSerializer.acceptableContentTypes = [sharedManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html", @"application/json"]];
+        sharedManager.requestSerializer = [AFJSONRequestSerializer new];
+        sharedManager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
+        sharedManager.responseSerializer.acceptableContentTypes = [sharedManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html"]];
     });
     return sharedManager;
 }

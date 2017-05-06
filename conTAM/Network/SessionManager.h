@@ -11,7 +11,6 @@
 
 @interface SessionManager : NSObject <NSURLSessionTaskDelegate, NSURLSessionDataDelegate,NSURLSessionDelegate>
 
-+ (id)sharedManager;
 + (AFHTTPSessionManager *)sharedHTTPSessionManager;
 +(NSString *)getBaseURL;
 

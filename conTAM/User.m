@@ -74,4 +74,13 @@
     return self;
 }
 
++(NSValueTransformer *)JSONTransformerForKey:(NSString *)key {
+    return [MTLValueTransformer transformerUsingReversibleBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
+        if (value == nil) {
+            value = NULL;
+        }
+        return value;
+    }];
+}
+
 @end
