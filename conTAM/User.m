@@ -10,6 +10,23 @@
 
 @implementation User
 
++(NSArray<NSString *> *)ignoredProperties {
+    return @[@"userPhoneses"];
+}
+
+-(instancetype)initWithPhone:(NSString *)phone password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image {
+    self = [super init];
+    if (self) {
+        self.phone = phone;
+        self.password = password;
+        self.firstName = firstName;
+        self.lastName = lastName;
+        self.email = email;
+        self.image = image;
+    }
+    return self;
+}
+
 -(instancetype)initWithPhone:(NSString *)phone password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image userPhoneses:(NSMutableArray *)userPhoneses {
     self = [super init];
     if (self) {
@@ -22,6 +39,18 @@
         self.userPhoneses = userPhoneses;
     }
     return self;
+}
+
++(NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"phone" : @"phone",
+             @"password" : @"password",
+             @"firstName" : @"firstName",
+             @"lastName" : @"lastName",
+             @"email" : @"email",
+             @"image" : @"image",
+             @"userPhoneses" : @"userPhoneses"
+             };
 }
 
 -(void)encodeWithCoder:(NSCoder *)aCoder {

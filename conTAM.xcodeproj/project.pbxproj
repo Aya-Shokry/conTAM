@@ -196,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				035EB5371EB698A000E72786 /* Database */,
+				4E13603D1EBB791C00049B99 /* utils */,
+				4E8DE3D11EB94F8D0009D9E1 /* Network */,
 				4E9405B11EB5F5610024782B /* ViewControllers */,
 				4E9405AB1EB5EEED0024782B /* ui */,
 				03EBD5081EB5B0890029CA80 /* Database */,
@@ -614,6 +616,7 @@
 				03F21E531EB527B9005259DC /* ViewController.m in Sources */,
 				035EB5421EB698A000E72786 /* ContactHasPhone.m in Sources */,
 				035EB5401EB698A000E72786 /* ContactDAO.m in Sources */,
+				4E6AF2551EBD1CB60029E2C4 /* ContactServices.m in Sources */,
 				03F21E501EB527B9005259DC /* AppDelegate.m in Sources */,
 				03F21E4D1EB527B9005259DC /* main.m in Sources */,
 				4E6E92191EBD8373000763D6 /* SessionManager.m in Sources */,

@@ -33,7 +33,7 @@ static RLMRealm *realm;
 -(void)addContact:(ContactDTO *)contact {
     NSError *error;
     [realm beginWriteTransaction];
-    [realm addObject:contact];
+    [realm addOrUpdateObject:contact];
     [realm commitWriteTransaction:&error];
     if (error != nil) {
         NSLog(@"%@", [error description]);

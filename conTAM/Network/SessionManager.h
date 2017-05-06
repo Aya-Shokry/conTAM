@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "AFHTTPSessionManager.h"
 
-@interface SessionManager : AFHTTPSessionManager
+@interface SessionManager : NSObject <NSURLSessionTaskDelegate, NSURLSessionDataDelegate,NSURLSessionDelegate>
 
 + (id)sharedManager;
++ (AFHTTPSessionManager *)sharedHTTPSessionManager;
++(NSString *)getBaseURL;
 
 @end

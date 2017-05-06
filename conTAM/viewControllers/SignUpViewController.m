@@ -7,6 +7,8 @@
 //
 
 #import "SignUpViewController.h"
+#import "User.h"
+#import "UserServices.h"
 
 @interface SignUpViewController ()
 
@@ -24,17 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)signUpBtnAction:(id)sender {
     
+    [UserServices registerUserWithData:[[User alloc] initWithPhone:_phoneTxtField.text password:_passwordTxtField.text firstName:_firstNameTxtField.text lastName:_lastNameTxtField.text email:_emailTxtField.text image:nil]];
 }
 @end

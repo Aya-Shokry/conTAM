@@ -10,27 +10,36 @@
 
 @implementation SessionManager
 
-static NSString *const baseURL = @"http://localhost:8080/conTAM/conTAM/service/";
-
-- (id)init {
-    self = [super initWithBaseURL:[NSURL URLWithString:baseURL]];
-    if(!self) return nil;
-    
-    self.responseSerializer = [AFJSONResponseSerializer serializer];
-    self.requestSerializer = [AFJSONRequestSerializer serializer];
-    
-    return self;
-}
+static NSString *const baseURL = @"http://localhost:8081/conTAM/conTAM/service/";
 
 + (id)sharedManager {
-    static SessionManager *_sessionManager = nil;
+    static AFURLSessionManager *_sessionManager = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sessionManager = [[self alloc] init];
+       // _sessionManager = [[self alloc] init];
+        NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        _sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     });
     
     return _sessionManager;
+}
+
++ (AFHTTPSessionManager *)sharedHTTPSessionManager {
+    
+    static AFHTTPSessionManager *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        sharedManager = [AFHTTPSessionManager manager];
+        sharedManager.requestSerializer = [[AFJSONRequestSerializer alloc] init];
+        sharedManager.responseSerializer.acceptableContentTypes = [sharedManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html", @"application/json"]];
+    });
+    return sharedManager;
+}
+
++(NSString *)getBaseURL {
+    return baseURL;
 }
 
 @end

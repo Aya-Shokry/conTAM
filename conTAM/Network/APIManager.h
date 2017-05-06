@@ -11,6 +11,8 @@
 
 @interface APIManager : NSObject
 
--(void)makeRequestToUrl:(NSURL *)url withParameters:(NSDictionary *)parameters success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;
++(void)makeGETRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters;
+
++(void)makePOSTRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters;
 
 @end

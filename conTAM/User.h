@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface User : NSObject <NSCoding>
+@interface User : MTLModel <MTLJSONSerializing, NSCoding>
 
 @property NSString *phone;
 @property NSString *password;
@@ -17,6 +18,8 @@
 @property NSString *email;
 @property NSData *image;
 @property NSMutableArray *userPhoneses;
+
+-(instancetype)initWithPhone:(NSString *)phone password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image;
 
 -(instancetype)initWithPhone:(NSString *)phone password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image userPhoneses:(NSMutableArray *)userPhoneses;
 
