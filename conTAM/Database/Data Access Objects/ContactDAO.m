@@ -24,6 +24,7 @@ static RLMRealm *realm;
         
         // Get the default Realm
         realm = [RLMRealm defaultRealm];
+        NSLog(@"realm file URL : %@", realm.configuration.fileURL);
     });
     
     return sharedContactDAOInstance;
@@ -39,7 +40,7 @@ static RLMRealm *realm;
     }
 }
 
--(void)setContact:(ContactDTO *)contact {
+-(void)setContact:(ContactDTO *)contact{
     NSError *error;
     [realm beginWriteTransaction];
     [realm addOrUpdateObject:contact];
@@ -71,7 +72,7 @@ static RLMRealm *realm;
 -(void)addPhones:(ContactHasPhone *)phones forContact:(ContactDTO *)contact {
     NSError *error;
     [realm beginWriteTransaction];
-    [contact.phones addObjects:(id<NSFastEnumeration>)phones];
+    [contact.contactPhoneses addObjects:(id<NSFastEnumeration>)phones];
     [realm commitWriteTransaction:&error];
     if (error != nil) {
         NSLog(@"%@", [error description]);

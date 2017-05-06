@@ -6,22 +6,25 @@
 //  Copyright © 2017 JETS. All rights reserved.
 //
 
-#import <Realm/Realm.h>
+#import <Mantle/Mantle.h>
 #import "ContactHasPhone.h"
 
 RLM_ARRAY_TYPE(ContactHasPhone)
 
-@interface ContactDTO : RLMObject
+@interface ContactDTO : MTLModel <MTLJSONSerializing>
 
-@property NSInteger *_id;
+@property NSInteger id;
 @property NSString *firstName;
 @property NSString *lastName;
 @property NSString *email;
 @property NSData *image;
-@property RLMArray<ContactHasPhone *><ContactHasPhone> *phones;
+@property RLMArray<ContactHasPhone *><ContactHasPhone> *contactPhoneses;
+@property NSArray *contactPhones;
 
--(instancetype)initWithId:(NSInteger *)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image;
+-(instancetype)initWithId:(NSInteger)id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image;
 
--(instancetype)initWithId:(NSInteger *)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image phones:(id<NSFastEnumeration>)phones;
+-(instancetype)initWithId:(NSInteger)id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image contactPhoneses:(id<NSFastEnumeration>)contactPhoneses;
+
+-(void)setContactPhonesesFromJSONDictionary;
 
 @end

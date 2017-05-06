@@ -6,18 +6,19 @@
 //  Copyright © 2017 JETS. All rights reserved.
 //
 
-#import <Realm/Realm.h>
+
+#import <Mantle/Mantle.h>
 
 @class ContactDTO;
 
-@interface ContactHasPhone : RLMObject
+@interface ContactHasPhone : MTLModel <MTLJSONSerializing>
 
-@property NSInteger *_id;
+@property NSInteger id;
+@property ContactDTO *contact;
 @property NSString *phone;
-@property ContactDTO *owner;
 
--(instancetype)initWithId:(NSInteger *)_id phone:(NSString *)phone;
+-(instancetype)initWithId:(NSInteger)id phone:(NSString *)phone;
 
--(instancetype)initWithId:(NSInteger *)_id phone:(NSString *)phone owner:(ContactDTO *)owner;
+-(instancetype)initWithId:(NSInteger)id contact:(ContactDTO *)contact phone:(NSString *)phone;
 
 @end

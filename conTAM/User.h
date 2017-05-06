@@ -10,14 +10,14 @@
 
 @interface User : NSObject <NSCoding>
 
-@property NSString *primaryPhone;
+@property NSString *phone;
 @property NSString *password;
 @property NSString *firstName;
 @property NSString *lastName;
 @property NSString *email;
 @property NSData *image;
-@property NSMutableArray *phones;
+@property NSMutableArray *userPhoneses;
 
--(instancetype)initWithPrimaryPhone:(NSString *)primaryPhone password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image phones:(NSMutableArray *)phones;
+-(instancetype)initWithPhone:(NSString *)phone password:(NSString *)password firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image userPhoneses:(NSMutableArray *)userPhoneses;
 
 @end

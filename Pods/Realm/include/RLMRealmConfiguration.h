@@ -22,17 +22,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- A block called when opening a Realm for the first time during the life
- of a process to determine if it should be compacted before being returned
- to the user. It is passed the total file size (data + free space) and the total
- bytes used by data in the file.
-
- Return `YES` to indicate that an attempt to compact the file should be made.
- The compaction will be skipped if another process is accessing it.
- */
-typedef BOOL (^RLMShouldCompactOnLaunchBlock)(NSUInteger totalBytes, NSUInteger bytesUsed);
-
-/**
  An `RLMRealmConfiguration` instance describes the different options used to
  create an instance of a Realm.
 
@@ -69,21 +58,13 @@ typedef BOOL (^RLMShouldCompactOnLaunchBlock)(NSUInteger totalBytes, NSUInteger 
 /// The local URL of the Realm file. Mutually exclusive with `inMemoryIdentifier`.
 @property (nonatomic, copy, nullable) NSURL *fileURL;
 
-/// A string used to identify a particular in-memory Realm. Mutually exclusive with `fileURL`.
+/// A string used to identify a particular in-memory Realm. Mutually exclusive with `path`.
 @property (nonatomic, copy, nullable) NSString *inMemoryIdentifier;
 
 /// A 64-byte key to use to encrypt the data, or `nil` if encryption is not enabled.
 @property (nonatomic, copy, nullable) NSData *encryptionKey;
 
-/// Whether to open the Realm in read-only mode.
-///
-/// This is required to be able to open Realm files which are not writeable or
-/// are in a directory which is not writeable. This should only be used on files
-/// which will not be modified by anyone while they are open, and not just to
-/// get a read-only view of a file which may be written to by another thread or
-/// process. Opening in read-only mode requires disabling Realm's reader/writer
-/// coordination, so committing a write transaction from another process will
-/// result in crashes.
+/// Whether the Realm is read-only (must be `YES` for read-only files).
 @property (nonatomic) BOOL readOnly;
 
 /// The current schema version.
@@ -102,18 +83,7 @@ typedef BOOL (^RLMShouldCompactOnLaunchBlock)(NSUInteger totalBytes, NSUInteger 
  */
 @property (nonatomic) BOOL deleteRealmIfMigrationNeeded;
 
-/**
- A block called when opening a Realm for the first time during the life
- of a process to determine if it should be compacted before being returned
- to the user. It is passed the total file size (data + free space) and the total
- bytes used by data in the file.
-
- Return `YES` to indicate that an attempt to compact the file should be made.
- The compaction will be skipped if another process is accessing it.
- */
-@property (nonatomic, copy, nullable) RLMShouldCompactOnLaunchBlock shouldCompactOnLaunch;
-
-/// The classes managed by the Realm.
+/// The classes persisted in the Realm.
 @property (nonatomic, copy, nullable) NSArray *objectClasses;
 
 @end

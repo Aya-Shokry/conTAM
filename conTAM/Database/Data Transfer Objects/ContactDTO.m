@@ -11,13 +11,17 @@
 @implementation ContactDTO
 
 +(NSString *)primaryKey {
-    return @"_id";
+    return @"id";
 }
 
--(instancetype)initWithId:(NSInteger *)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image {
++(NSArray<NSString *> *)ignoredProperties {
+    return @[@"contactPhones"];
+}
+
+-(instancetype)initWithId:(NSInteger)id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image {
     self = [super init];
     if (self) {
-        self._id = _id;
+        self.id = id;
         self.firstName = firstName;
         self.lastName = lastName;
         self.email = email;
@@ -26,17 +30,38 @@
     return self;
 }
 
--(instancetype)initWithId:(NSInteger *)_id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image phones:(id<NSFastEnumeration>)phones {
+-(instancetype)initWithId:(NSInteger)id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image contactPhoneses:(id<NSFastEnumeration>)contactPhoneses {
     self = [super init];
     if (self) {
-        self._id = _id;
+        self.id = id;
         self.firstName = firstName;
         self.lastName = lastName;
         self.email = email;
         self.image = image;
-        [self.phones addObjects:phones];
+        [self.contactPhoneses addObjects:contactPhoneses];
     }
     return self;
+}
+
+-(void)setContactPhonesesFromJSONDictionary {
+    for (NSDictionary *contactPhone in self.contactPhones) {
+        [self.contactPhoneses addObject:[[ContactHasPhone alloc] initWithId:[contactPhone[@"id"] integerValue] contact:self phone:contactPhone[@"phone"]]];
+    }
+}
+
++(NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"id" : @"id",
+             @"firstName" : @"firstName",
+             @"lastName" : @"lastName",
+             @"email" : @"email",
+             @"image" : @"image",
+             @"contactPhones" : @"contactPhoneses"
+             };
+}
+
++(NSValueTransformer *)JSONTransformerForKey:(NSString *)key {
+    return [key isEqualToString:@"contactPhoneses"]? [MTLJSONAdapter arrayTransformerWithModelClass:ContactHasPhone.class] : nil;
 }
 
 @end

@@ -11,26 +11,34 @@
 @implementation ContactHasPhone
 
 +(NSString *)primaryKey {
-    return @"_id";
+    return @"id";
 }
 
--(instancetype)initWithId:(NSInteger *)_id phone:(NSString *)phone {
+-(instancetype)initWithId:(NSInteger)id phone:(NSString *)phone {
     self = [super init];
     if (self) {
-        self._id = _id;
+        self.id = id;
         self.phone = phone;
     }
     return self;
 }
 
--(instancetype)initWithId:(NSInteger *)_id phone:(NSString *)phone owner:(ContactDTO *)owner {
+-(instancetype)initWithId:(NSInteger)id contact:(ContactDTO *)contact phone:(NSString *)phone {
     self = [super init];
     if (self) {
-        self._id = _id;
+        self.id = id;
         self.phone = phone;
-        self.owner = owner;
+        self.contact = contact;
     }
     return self;
+}
+
++(NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"id" : @"id",
+             @"phone" : @"phone",
+             @"contact" : @"contact"
+             };
 }
 
 @end
