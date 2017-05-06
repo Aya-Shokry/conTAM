@@ -21,6 +21,11 @@
 		03F21E711EB527B9005259DC /* conTAMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F21E701EB527B9005259DC /* conTAMUITests.m */; };
 		35853498CCE328660D872B0C /* libPods-conTAM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E32EE54EC413B39CC33752 /* libPods-conTAM.a */; };
 		3C690C8317DE2B31E3043575 /* libPods-conTAMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EF7445EAA22F74F8B3A2F3 /* libPods-conTAMTests.a */; };
+		4E1360401EBB795C00049B99 /* ServicesURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E13603F1EBB795C00049B99 /* ServicesURLs.m */; };
+		4E6AF2521EBD1C980029E2C4 /* UserServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AF2511EBD1C980029E2C4 /* UserServices.m */; };
+		4E6AF2551EBD1CB60029E2C4 /* ContactServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6AF2541EBD1CB60029E2C4 /* ContactServices.m */; };
+		4E6E92191EBD8373000763D6 /* SessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E92181EBD8373000763D6 /* SessionManager.m */; };
+		4E6E921C1EBD838E000763D6 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6E921B1EBD838E000763D6 /* APIManager.m */; };
 		4E9405B41EB5F5C90024782B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9405B31EB5F5C90024782B /* LoginViewController.m */; };
 		4E9405B71EB5F5E30024782B /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9405B61EB5F5E30024782B /* SignUpViewController.m */; };
 		4E9405BB1EB5F7F40024782B /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9405B81EB5F7F40024782B /* email.png */; };
@@ -76,6 +81,16 @@
 		03F21E721EB527B9005259DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A6A7BD30A6C79D40D5AFBB3 /* Pods-conTAM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conTAM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-conTAM/Pods-conTAM.debug.xcconfig"; sourceTree = "<group>"; };
 		0F1FFE5EE2703C169645EF7B /* Pods-conTAMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-conTAMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-conTAMTests/Pods-conTAMTests.release.xcconfig"; sourceTree = "<group>"; };
+		4E13603E1EBB795C00049B99 /* ServicesURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServicesURLs.h; path = utils/ServicesURLs.h; sourceTree = "<group>"; };
+		4E13603F1EBB795C00049B99 /* ServicesURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServicesURLs.m; path = utils/ServicesURLs.m; sourceTree = "<group>"; };
+		4E6AF2501EBD1C980029E2C4 /* UserServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserServices.h; path = Network/UserServices.h; sourceTree = "<group>"; };
+		4E6AF2511EBD1C980029E2C4 /* UserServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserServices.m; path = Network/UserServices.m; sourceTree = "<group>"; };
+		4E6AF2531EBD1CB60029E2C4 /* ContactServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactServices.h; path = Network/ContactServices.h; sourceTree = "<group>"; };
+		4E6AF2541EBD1CB60029E2C4 /* ContactServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactServices.m; path = Network/ContactServices.m; sourceTree = "<group>"; };
+		4E6E92171EBD8373000763D6 /* SessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SessionManager.h; path = Network/SessionManager.h; sourceTree = "<group>"; };
+		4E6E92181EBD8373000763D6 /* SessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SessionManager.m; path = Network/SessionManager.m; sourceTree = "<group>"; };
+		4E6E921A1EBD838E000763D6 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APIManager.h; path = Network/APIManager.h; sourceTree = "<group>"; };
+		4E6E921B1EBD838E000763D6 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APIManager.m; path = Network/APIManager.m; sourceTree = "<group>"; };
 		4E9405B21EB5F5C90024782B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = viewControllers/LoginViewController.h; sourceTree = "<group>"; };
 		4E9405B31EB5F5C90024782B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = viewControllers/LoginViewController.m; sourceTree = "<group>"; };
 		4E9405B51EB5F5E30024782B /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = viewControllers/SignUpViewController.h; sourceTree = "<group>"; };
@@ -183,6 +198,7 @@
 				035EB5371EB698A000E72786 /* Database */,
 				4E9405B11EB5F5610024782B /* ViewControllers */,
 				4E9405AB1EB5EEED0024782B /* ui */,
+				03EBD5081EB5B0890029CA80 /* Database */,
 				03F21E4E1EB527B9005259DC /* AppDelegate.h */,
 				03F21E4F1EB527B9005259DC /* AppDelegate.m */,
 				03F21E511EB527B9005259DC /* ViewController.h */,
@@ -245,6 +261,30 @@
 				BE3CC30D00EC4159B6397CB7 /* Pods-conTAMUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E13603D1EBB791C00049B99 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4E13603E1EBB795C00049B99 /* ServicesURLs.h */,
+				4E13603F1EBB795C00049B99 /* ServicesURLs.m */,
+			);
+			name = utils;
+			sourceTree = "<group>";
+		};
+		4E8DE3D11EB94F8D0009D9E1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4E6AF2501EBD1C980029E2C4 /* UserServices.h */,
+				4E6AF2511EBD1C980029E2C4 /* UserServices.m */,
+				4E6AF2531EBD1CB60029E2C4 /* ContactServices.h */,
+				4E6AF2541EBD1CB60029E2C4 /* ContactServices.m */,
+				4E6E92171EBD8373000763D6 /* SessionManager.h */,
+				4E6E92181EBD8373000763D6 /* SessionManager.m */,
+				4E6E921A1EBD838E000763D6 /* APIManager.h */,
+				4E6E921B1EBD838E000763D6 /* APIManager.m */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		4E9405AB1EB5EEED0024782B /* ui */ = {
@@ -559,16 +599,24 @@
 			files = (
 				03B713051EBB9CAE00C00608 /* User.m in Sources */,
 				4E9405C31EB5FEC80024782B /* ContactDetailsViewController.m in Sources */,
+				4E1360401EBB795C00049B99 /* ServicesURLs.m in Sources */,
+				4E6E921C1EBD838E000763D6 /* APIManager.m in Sources */,
 				4E9405C61EB5FEFD0024782B /* AddOrUpdateContactViewController.m in Sources */,
 				4E9405B41EB5F5C90024782B /* LoginViewController.m in Sources */,
 				4E9405C01EB5FBF10024782B /* ContactsListViewController.m in Sources */,
 				035EB5411EB698A000E72786 /* ContactDTO.m in Sources */,
 				4E9405B71EB5F5E30024782B /* SignUpViewController.m in Sources */,
+				03EBD50D1EB5B1E70029CA80 /* ContactDTO.m in Sources */,
+				03EBD5161EB5CDA50029CA80 /* ContactDAO.m in Sources */,
+				4E6AF2521EBD1C980029E2C4 /* UserServices.m in Sources */,
+				03EBD5101EB5B7C70029CA80 /* ContactHasPhone.m in Sources */,
+				03EBD5131EB5C1690029CA80 /* User.m in Sources */,
 				03F21E531EB527B9005259DC /* ViewController.m in Sources */,
 				035EB5421EB698A000E72786 /* ContactHasPhone.m in Sources */,
 				035EB5401EB698A000E72786 /* ContactDAO.m in Sources */,
 				03F21E501EB527B9005259DC /* AppDelegate.m in Sources */,
 				03F21E4D1EB527B9005259DC /* main.m in Sources */,
+				4E6E92191EBD8373000763D6 /* SessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
