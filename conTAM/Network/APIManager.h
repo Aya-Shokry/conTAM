@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "SessionManager.h"
+#import "ServiceResponseDelegate.h"
 
 @interface APIManager : NSObject
 
-+(void)makeGETRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters;
++(void)makeGETRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters serviceResponseDelegate:(id<ServiceResponseDelegate>)serviceResponseDelegate;
 
-+(void)makePOSTRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters;
++(void)makePOSTRequestWithURL:(NSString *)url parameters:(NSDictionary *)parameters serviceResponseDelegate:(id<ServiceResponseDelegate>)serviceResponseDelegate serializerType:(int)serializerType;
 
 @end

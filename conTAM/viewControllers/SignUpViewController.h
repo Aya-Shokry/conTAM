@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "UIRefreshControllerDelegate.h"
 
-@interface SignUpViewController : ViewController
+@interface SignUpViewController : ViewController <UIRefreshControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *firstNameTxtField;
 
@@ -21,7 +22,5 @@
 @property (strong, nonatomic) IBOutlet UITextField *passwordTxtField;
 
 - (IBAction)signUpBtnAction:(id)sender;
-
-@property (strong, nonatomic) IBOutlet UIButton *loginBtnAction;
 
 @end

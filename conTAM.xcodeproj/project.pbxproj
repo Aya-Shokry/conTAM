@@ -55,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031D868E1EBFA123006744F4 /* ServiceResponseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceResponseDelegate.h; path = Delegates/ServiceResponseDelegate.h; sourceTree = "<group>"; };
+		031D868F1EBFA174006744F4 /* UIRefreshControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIRefreshControllerDelegate.h; path = Delegates/UIRefreshControllerDelegate.h; sourceTree = "<group>"; };
 		035EB5391EB698A000E72786 /* ContactDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDAO.h; sourceTree = "<group>"; };
 		035EB53A1EB698A000E72786 /* ContactDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDAO.m; sourceTree = "<group>"; };
 		035EB53C1EB698A000E72786 /* ContactDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDTO.h; sourceTree = "<group>"; };
@@ -141,6 +143,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031D868D1EBFA0E0006744F4 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				031D868E1EBFA123006744F4 /* ServiceResponseDelegate.h */,
+				031D868F1EBFA174006744F4 /* UIRefreshControllerDelegate.h */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
 		035EB5371EB698A000E72786 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,12 +206,12 @@
 		03F21E4A1EB527B9005259DC /* conTAM */ = {
 			isa = PBXGroup;
 			children = (
+				031D868D1EBFA0E0006744F4 /* Delegates */,
 				035EB5371EB698A000E72786 /* Database */,
 				4E13603D1EBB791C00049B99 /* utils */,
 				4E8DE3D11EB94F8D0009D9E1 /* Network */,
 				4E9405B11EB5F5610024782B /* ViewControllers */,
 				4E9405AB1EB5EEED0024782B /* ui */,
-				03EBD5081EB5B0890029CA80 /* Database */,
 				03F21E4E1EB527B9005259DC /* AppDelegate.h */,
 				03F21E4F1EB527B9005259DC /* AppDelegate.m */,
 				03F21E511EB527B9005259DC /* ViewController.h */,
@@ -608,11 +619,7 @@
 				4E9405C01EB5FBF10024782B /* ContactsListViewController.m in Sources */,
 				035EB5411EB698A000E72786 /* ContactDTO.m in Sources */,
 				4E9405B71EB5F5E30024782B /* SignUpViewController.m in Sources */,
-				03EBD50D1EB5B1E70029CA80 /* ContactDTO.m in Sources */,
-				03EBD5161EB5CDA50029CA80 /* ContactDAO.m in Sources */,
 				4E6AF2521EBD1C980029E2C4 /* UserServices.m in Sources */,
-				03EBD5101EB5B7C70029CA80 /* ContactHasPhone.m in Sources */,
-				03EBD5131EB5C1690029CA80 /* User.m in Sources */,
 				03F21E531EB527B9005259DC /* ViewController.m in Sources */,
 				035EB5421EB698A000E72786 /* ContactHasPhone.m in Sources */,
 				035EB5401EB698A000E72786 /* ContactDAO.m in Sources */,

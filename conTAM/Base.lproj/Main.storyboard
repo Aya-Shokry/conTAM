@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="klY-Lc-4Gn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7CO-5O-SMe">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -192,7 +192,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpBtnAction:" destination="7CO-5O-SMe" eventType="touchUpInside" id="B4m-BK-Npi"/>
                                     <segue destination="klY-Lc-4Gn" kind="presentation" identifier="signupSegue" id="7xN-u5-zw5"/>
                                 </connections>
                             </button>
@@ -307,7 +306,6 @@
                         <outlet property="emailTxtField" destination="cOw-Dm-gTK" id="6eq-ty-wm0"/>
                         <outlet property="firstNameTxtField" destination="847-ys-uBq" id="PFn-gv-U5E"/>
                         <outlet property="lastNameTxtField" destination="Hhq-mn-35h" id="dA6-2u-6ne"/>
-                        <outlet property="loginBtnAction" destination="Vhw-2y-Yxg" id="Rqc-Ds-Xpz"/>
                         <outlet property="passwordTxtField" destination="leA-wm-RlW" id="z84-SZ-thK"/>
                         <outlet property="phoneTxtField" destination="V90-DQ-XhL" id="YJT-wX-TzN"/>
                     </connections>

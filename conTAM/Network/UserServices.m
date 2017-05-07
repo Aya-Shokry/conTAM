@@ -12,24 +12,38 @@
 
 @implementation UserServices
 
-+(void) registerUserWithData: (User*) user{
+@synthesize refreshControllerDelegate;
+
+-(void)registerUserWithData:(User *)user{
     NSError *error;
     NSDictionary *userJSONObject = [MTLJSONAdapter JSONDictionaryFromModel:user error:&error];
     if (error == nil) {
-        [APIManager makeGETRequestWithURL:[[SessionManager getBaseURL] stringByAppendingString:@"registerUser"] parameters:userJSONObject];
+        [APIManager makePOSTRequestWithURL:[[SessionManager getBaseURL] stringByAppendingString:@"registerUser"] parameters:userJSONObject serviceResponseDelegate:self serializerType:0];
     }
     else  {
-        NSLog(@"error in UserServices:registerUserWithData : %@", error.description);
+        NSLog(@"Error in [UserServices registerUserWithData] : %@", error.description);
     }
 }
 
-+(void) loginWithPhone:(NSString*) primaryPhone AndPassword: (NSString*) password{ // return string
-    
-  
+-(void)loginWithPhone:(NSString *)primaryPhone password:(NSString *)password {
+    NSError *error;
+    NSDictionary *parameters = @{@"primaryPhone" : primaryPhone, @"password" : password};
+    if (error == nil) {
+        [APIManager makePOSTRequestWithURL:[[SessionManager getBaseURL] stringByAppendingString:@"login"] parameters:parameters serviceResponseDelegate:self serializerType:1];
+    }
+    else  {
+        NSLog(@"Error in [UserServices login] : %@", error.description);
+    }
 }
 
-+(void) updateUserWithData: (User*) user{
+-(void) updateUserWithData: (User*) user{
     
-  
+    
 }
+
+-(void)serviceResponseDidReceived:(id)response {
+    
+    [refreshControllerDelegate refreshViewWithModel:response];
+}
+
 @end

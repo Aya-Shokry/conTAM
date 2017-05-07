@@ -21,7 +21,7 @@ static NSString *const baseURL = @"http://localhost:8081/conTAM/conTAM/service/"
         sharedManager = [AFHTTPSessionManager manager];
         sharedManager.requestSerializer = [AFJSONRequestSerializer new];
         sharedManager.responseSerializer = [AFJSONResponseSerializer serializerWithReadingOptions:NSJSONReadingAllowFragments];
-        sharedManager.responseSerializer.acceptableContentTypes = [sharedManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html"]];
+        sharedManager.responseSerializer.acceptableContentTypes = [sharedManager.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html", @"application/json"]];
     });
     return sharedManager;
 }

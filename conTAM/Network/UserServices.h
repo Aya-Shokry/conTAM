@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "User.h"
+#import "ServiceResponseDelegate.h"
 
-@interface UserServices : NSObject
+@interface UserServices : NSObject <ServiceResponseDelegate>
 
-+(void) registerUserWithData: (User*) user;
-+(void) loginWithPhone:(NSString*) primaryPhone AndPassword: (NSString*) password;
-+(void) updateUserWithData: (User*) user;
+-(void)registerUserWithData:(User *)user;
+-(void)loginWithPhone:(NSString *)primaryPhone password:(NSString *)password;
+-(void) updateUserWithData: (User*) user;
 
 @end

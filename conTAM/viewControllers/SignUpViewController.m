@@ -9,6 +9,7 @@
 #import "SignUpViewController.h"
 #import "User.h"
 #import "UserServices.h"
+#import "LoginViewController.h"
 
 @interface SignUpViewController ()
 
@@ -28,6 +29,14 @@
 
 - (IBAction)signUpBtnAction:(id)sender {
     
-    [UserServices registerUserWithData:[[User alloc] initWithPhone:_phoneTxtField.text password:_passwordTxtField.text firstName:_firstNameTxtField.text lastName:_lastNameTxtField.text email:_emailTxtField.text image:nil]];
+    UserServices *userServices = [UserServices new];
+    userServices.refreshControllerDelegate = self;
+    [userServices registerUserWithData:[[User alloc] initWithPhone:_phoneTxtField.text password:_passwordTxtField.text firstName:_firstNameTxtField.text lastName:_lastNameTxtField.text email:_emailTxtField.text image:nil]];
 }
+
+-(void)refreshViewWithModel:(id)model {
+    
+    [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"LoginController"] animated:YES completion:nil];
+}
+
 @end

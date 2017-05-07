@@ -8,14 +8,14 @@
 
 #import "ViewController.h"
 #import "SignUpViewController.h"
+#import "UIRefreshControllerDelegate.h"
 
-@interface LoginViewController : ViewController
+@interface LoginViewController : ViewController <UIRefreshControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *phoneTxtField;
 @property (strong, nonatomic) IBOutlet UITextField *passwordTxtField;
 
 - (IBAction)loginBtnAction:(id)sender;
-- (IBAction)signUpBtnAction:(id)sender;
 
 
 @end
