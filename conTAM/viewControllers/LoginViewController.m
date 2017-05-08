@@ -34,6 +34,23 @@
 
 -(void)refreshViewWithModel:(id)model {
     
+    if (model != [NSNull null]) {
+        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:data forKey:@"UserObject"];
+        
+        [self presentViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeNavigationController"] animated:YES completion:nil];
+    } else {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Failed to login" message:@"Incorrect phone or password, please re-enter your data" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alert addAction:okAction];
+        [self presentViewController:alert animated:YES completion:^{
+            _passwordTxtField.text =@"";
+        }];
+    }
 }
 
 @end

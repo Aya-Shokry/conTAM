@@ -10,7 +10,7 @@
 
 @implementation SessionManager
 
-static NSString *const baseURL = @"http://localhost:8081/conTAM/conTAM/service/";
+static NSString *const baseURL = @"http://localhost:8080/conTAM/conTAM/service/";
 
 + (AFHTTPSessionManager *)sharedHTTPSessionManager {
     
