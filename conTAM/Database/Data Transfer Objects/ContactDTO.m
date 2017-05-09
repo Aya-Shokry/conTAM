@@ -43,6 +43,18 @@
     return self;
 }
 
+-(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image contactPhoneses:(NSArray*)contactPhoneses{
+    self = [super init];
+    if (self) {
+        self.firstName = firstName;
+        self.lastName = lastName;
+        self.email = email;
+        self.image = image;
+        [self.contactPhones arrayByAddingObjectsFromArray:contactPhoneses];
+    }
+    return self;
+}
+
 -(void)setContactPhonesesFromJSONDictionary {
     for (NSDictionary *contactPhone in self.contactPhones) {
         [self.contactPhoneses addObject:[[ContactHasPhone alloc] initWithId:[contactPhone[@"id"] integerValue] contact:self phone:contactPhone[@"phone"]]];

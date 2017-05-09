@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="1074.375" y="138.38028169014083"/>
         </scene>
-        <!--Add Or Update Contact View Controller-->
+        <!--New Contact-->
         <scene sceneID="RG3-H1-gzB">
             <objects>
                 <viewController storyboardIdentifier="AddOrUpdateContactController" id="GBz-Pr-64U" customClass="AddOrUpdateContactViewController" sceneMemberID="viewController">
@@ -118,7 +118,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bff" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hX3-Xe-g68">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hX3-Xe-g68">
                                 <rect key="frame" x="30" y="420" width="261" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -128,6 +128,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1422788203" green="0.46515852210000003" blue="0.72680038209999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Contact" id="CVA-Yb-6JU">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="0ec-CB-aNt">
+                            <connections>
+                                <action selector="saveBtnAction:" destination="GBz-Pr-64U" id="m08-YS-5ff"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTxtField" destination="f6i-HH-dkR" id="Fz3-f6-GCQ"/>
+                        <outlet property="firstNameTxtField" destination="5NC-Wd-vjN" id="Zdv-zm-Zxu"/>
+                        <outlet property="lastNameTextField" destination="c4n-Jt-2tl" id="zH6-he-uwM"/>
+                        <outlet property="phoneTxtField" destination="hX3-Xe-g68" id="tYU-lh-5lL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfn-xx-hJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

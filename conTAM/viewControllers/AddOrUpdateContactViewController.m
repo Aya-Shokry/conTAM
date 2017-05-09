@@ -14,8 +14,11 @@
 
 @implementation AddOrUpdateContactViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
@@ -24,14 +27,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+-(void)refreshViewWithModel:(id)model{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
+- (IBAction)saveBtnAction:(id)sender {
+    
+    ContactServices *contactServices = [ContactServices new];
+    contactServices.refreshControllerDelegate = self;
+    
+    NSMutableArray* phones = [NSMutableArray new];
+    [phones addObject:[_phoneTxtField text]];
+    
+    [contactServices addContactWithData:[[ContactDTO alloc] initWithFirstName:[_firstNameTxtField text] lastName:[_lastNameTextField text] email:[_emailTxtField text] image:nil contactPhoneses:phones] ForUser:@"01000144446"];
+}
 @end

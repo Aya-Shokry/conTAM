@@ -7,7 +7,17 @@
 //
 
 #import "ViewController.h"
+#import "UIRefreshControllerDelegate.h"
+#import "ContactDTO.h"
+#import "ContactServices.h"
 
-@interface AddOrUpdateContactViewController : ViewController
+@interface AddOrUpdateContactViewController : ViewController  <UIRefreshControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *firstNameTxtField;
+@property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *emailTxtField;
+@property (strong, nonatomic) IBOutlet UITextField *phoneTxtField;
+- (IBAction)saveBtnAction:(id)sender;
+
 
 @end

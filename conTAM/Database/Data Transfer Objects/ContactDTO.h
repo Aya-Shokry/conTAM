@@ -25,6 +25,8 @@ RLM_ARRAY_TYPE(ContactHasPhone)
 
 -(instancetype)initWithId:(NSInteger)id firstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image contactPhoneses:(id<NSFastEnumeration>)contactPhoneses;
 
+-(instancetype)initWithFirstName:(NSString *)firstName lastName:(NSString *)lastName email:(NSString *)email image:(NSData *)image contactPhoneses:(NSArray*)contactPhoneses;
+
 -(void)setContactPhonesesFromJSONDictionary;
 
 @end
